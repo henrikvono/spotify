@@ -1,0 +1,21 @@
+---
+const { title } = Astro.props;
+---
+
+<section class="shelf">
+  <h2>{title}</h2>
+  <div class="shelf-content">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .shelf {
+    margin: 20px;
+  }
+  .shelf-content {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+  }
+</style>

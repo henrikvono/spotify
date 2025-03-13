@@ -1,0 +1,41 @@
+---
+const { name, imgPath, title } = Astro.props;
+---
+
+<div class="artist-card">
+  <img src={imgPath} alt={title} />
+  <p>{title}</p>
+  <p class="artist">Kunstner</p>
+</div>
+
+<style>
+  .artist-card {
+    padding: 1rem;
+    text-align: center;
+
+    color: white;
+  }
+
+  div.artist-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .artist-card:hover {
+    background-color: #2f2f2f;
+    border-radius: 5px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  p .artist {
+    color: rgb(156, 156, 156);
+  }
+
+  .artist-card img {
+    width: 100px;
+    border-radius: 50px;
+  }
+</style>

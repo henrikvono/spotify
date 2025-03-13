@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import TopBar from "../components/TopBar.astro";
+import Footer from "../components/Footer.astro";
+import PlaylistCard from "../components/PlaylistCard.astro";
+import Shelf from "../components/Shelf.astro";
+import ArtistCard from "../components/ArtistCard.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <Nav />
+    <TopBar />
+    <main>
+      <Shelf title="Populære kunstnere">
+        <ArtistCard imgPath="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" title="Lady Gaga" body="Kunstner" />
+        <ArtistCard imgPath="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" title="Rihanna" body="Kunstner" />
+        <ArtistCard imgPath="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" title="Tobias Rahim" body="Kunstner" />
+      </Shelf>
+
+      <Shelf title="Populære albums">
+        <PlaylistCard imgPath="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" title="MGP 2025" body="Album" />
+        <PlaylistCard imgPath="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" title="Månen Er Min Ven" body="Album" />
+        <PlaylistCard imgPath="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" title="Månen Er Min Ven" body="Album" />
+        <PlaylistCard imgPath="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" title="Månen Er Min Ven" body="Album" />
+      </Shelf>
+    </main>
+    <Footer />
+  </body>
+</html>

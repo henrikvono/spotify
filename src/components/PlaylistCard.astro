@@ -1,0 +1,23 @@
+---
+const { imgPath, title, body } = Astro.props;
+---
+
+<div class="playlist-card">
+  <img src={imgPath} alt={title} />
+  <h3>{title}</h3>
+  <p>{body}</p>
+</div>
+
+<style>
+  .playlist-card {
+    background: #282828;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+  }
+  .playlist-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+</style>
