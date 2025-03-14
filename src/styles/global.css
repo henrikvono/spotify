@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
@@ -12,8 +13,14 @@ body {
 }
 
 main {
-  padding: 20px;
+  padding: 10px;
   background-color: #121212;
-  margin: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 10px;
+  padding-bottom: 50px;
+}
+
+div.sideflex {
+  display: flex;
 }

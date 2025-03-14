@@ -4,7 +4,7 @@ const { imgPath, title, body } = Astro.props;
 
 <div class="playlist-card">
   <img src={imgPath} alt={title} />
-  <a href="#">{title}</a>
+  <a href="#" class="albumtitle">{title}</a>
   <p class="artist">{body}</p>
 </div>
 
@@ -15,11 +15,17 @@ const { imgPath, title, body } = Astro.props;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
+    padding-bottom: 30px;
+    max-width: 100%;
   }
   .playlist-card img {
     width: 150px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  div.playlist-card {
+    min-width: 150px;
   }
 
   div a {
@@ -38,6 +44,7 @@ const { imgPath, title, body } = Astro.props;
     background-color: #1f1f1f;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   }
 
   p {
